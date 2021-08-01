@@ -16,10 +16,9 @@ cd ~/WorkArea/
 
 git clone https://github.com/EttusResearch/uhd.git
 cd uhd/
-git checkout v3.15.00
-cd host/
 mkdir build
 cd build
+git checkout UHD-3.15.LTScd host/
 cmake ../
 
 #add paramater to change makeopts -j #
