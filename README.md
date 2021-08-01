@@ -1,7 +1,7 @@
 # host-install-script
 A script purposed to install all needed tools on a fresh ubuntu:18.04 host or QEMU/KVM Virtual machine
 
-This script will install UHD-3.15,srsRan 20.04,gnuradio 3.7,and everything needed for docker
+This script will install UHD-3.15,srsRan 20.04,gnuradio 3.8,and everything needed for docker
 
 #To run:
 git clone https://github.com/Aerpaw-MSU/host-install-script.git
