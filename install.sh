@@ -62,7 +62,7 @@ git pull --recurse-submodules=on
 git submodule update --init
 
 
-cmake -DENABLE_GR_UHD=OFF ..
+cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 ../
 make -j $(nproc --all)
 make install
 ldconfig
