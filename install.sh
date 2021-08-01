@@ -21,9 +21,7 @@ mkdir build
 git checkout UHD-3.15.LTS
 cd build
 cmake ../
-
-#add paramater to change makeopts -j #
-make
+make -j $(nproc --all)
 make install
 ldconfig
 
@@ -37,8 +35,7 @@ git checkout -b 20.04
 mkdir build
 cd build
 cmake ../
-#same here
-make
+make -j $(nproc --all)
 make install
 srsran_install_configs.sh user
 
@@ -60,8 +57,6 @@ mkdir build
 cd build
 git pull --recurse-submodules=on
 git submodule update --init
-
-
 cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 ../
 make -j $(nproc --all)
 make install
