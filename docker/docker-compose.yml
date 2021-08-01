@@ -1,0 +1,13 @@
+version: '3'
+services:
+  server:
+    build: .
+    stdin_open: true
+    tty: true
+    # Needed to create tun/tap interface
+    privileged: true
+    volumes:
+      - ../:/home/
+    command: >
+      /bin/bash
+    
