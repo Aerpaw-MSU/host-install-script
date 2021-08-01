@@ -9,7 +9,7 @@ apt upgrade -y
 
 #start building UHD-3.15 from source
 
-apt-get install libboost-all-dev libusb-1.0-0-dev doxygen python3-docutils python3-mako python3-numpy python-mako python3-requests python3-ruamel.yaml python3-setuptools cmake build-essential -y
+apt-get install libboost-all-dev libusb-1.0-0-dev doxygen python3-docutils python-pip python3-mako python3-numpy python-mako python3-requests python3-ruamel.yaml python3-setuptools cmake build-essential -y
 
 mkdir ~/WorkArea/
 cd ~/WorkArea/
@@ -60,6 +60,7 @@ mkdir build
 cd build
 git pull --recurse-submodules=on
 git submodule update --init
+pip install six
 cmake -DENABLE_GR_UHD=OFF ..
 make -j $(nproc --all)
 make install
