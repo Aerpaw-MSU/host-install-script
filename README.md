@@ -13,6 +13,6 @@ sudo ./install.sh <br />
 
 
 # To be added: <br />
-~~-Need to add runtime parameters for changing versions and makeopts so the script can be more useful into the future and compile the source faster~~ push 12 <br />
+~~-Need to add runtime parameters for changing versions and makeopts so the script can be more useful into the future and compile the source faster~~ push 2076b4f5ffc311fd188a07cd70ac8ac73ea9a906 <br />
 -Possibly integrate with docker-compose or VM to automate entire process? <br />
 
