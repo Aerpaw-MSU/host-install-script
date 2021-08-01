@@ -55,12 +55,13 @@ echo 'export PYTHONPATH=/usr/local/lib/python3/dist-packages:usr/local/lib/pytho
 echo 'export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH' >> ~/.profile
 git clone --recursive https://github.com/gnuradio/gnuradio
 cd gnuradio
-git checkout maint-3.7
+git checkout maint-3.8
 mkdir build
 cd build
 git pull --recurse-submodules=on
 git submodule update --init
-pip install six
+
+
 cmake -DENABLE_GR_UHD=OFF ..
 make -j $(nproc --all)
 make install
