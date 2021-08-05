@@ -29,7 +29,7 @@ RUN make install
 RUN ldconfig
 
 #start installing srsRan 20.04 from source
-RUN apt-get install build-essential cmake libfftw3-dev libmbedtls-dev libboost-program-options-dev libconfig++-dev libsctp-dev -y
+RUN apt-get install git build-essential cmake libfftw3-dev libmbedtls-dev libboost-program-options-dev libconfig++-dev libsctp-dev -y
 
 RUN cd ~/WorkArea/
 RUN git clone https://github.com/srsRAN/srsRAN.git
